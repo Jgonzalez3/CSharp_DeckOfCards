@@ -44,10 +44,9 @@ namespace DeckOfCards{
             Random rand = new Random();
             for(int idx = 0; idx < cards.Count-1; idx++){
                 int swap = rand.Next(0,52);
-                Card cardswap = cards[idx];
                 Card temp = cards[swap];
-                cards[swap] = cardswap;
-                temp = cards[idx];
+                cards[swap] = cards[idx];
+                cards[idx] = temp;
             }
         }
     }
